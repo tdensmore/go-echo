@@ -6,6 +6,7 @@ metadata:
     app: tcp-echo
     system: example
 spec:
+  type: NodePort
   selector:
     app: "tcp-echo"
   ports:
@@ -13,4 +14,3 @@ spec:
       port: 2701
       targetPort: 2701
       nodePort: 32701 #port exposed on the node (cluster)
-  type: NodePort
